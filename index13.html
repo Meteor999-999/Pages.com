@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style13.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png">
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="active"><a href="#">Time</a></li>
+                        <li><a href="#">Stop</a></li>
+                        <li><a href="#">Sky</a></li>
+                        <li><a href="#">Rain</a></li>
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <img src="menu.png">
+                </div>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="social-icons">
+                <img src="instagram.png">
+                <img src="facebook.png">
+                <img src="twitter.png">
+                <img src="youtube.png"> 
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <img src="search.png">
+            </div>
+        </div>
+
+        <img src="cloud.png" id="clouods">
+        <img src="plane.png" id="airplane">
+        <div id="hotairballoon">
+            <img src="balloon.png" class="balloon1">
+            <img src="balloon.png" class="balloon2">
+            <img src="balloon.png" class="balloon3">
+        </div>
+
+
+        <img src="pause.png" id="myImg">
+    </div>
+
+    <script>
+        var myImg = document.getElementById("myImg");
+
+        myImg.onclick = function(){
+            if(clouods.style.webkitAnimationPlayState == "paused")
+                {
+                    clouods.style.webkitAnimationPlayState = "running";
+                    airplane.style.webkitAnimationPlayState = "running";
+                    hotairballoon.style.webkitAnimationPlayState = "running";
+                    myImg.src = 'pause.png';
+                }
+             else{
+                clouods.style.webkitAnimationPlayState = "paused";
+                airplane.style.webkitAnimationPlayState = "paused";
+                hotairballoon.style.webkitAnimationPlayState = "paused";
+                myImg.src = 'play.png';
+             }   
+        }
+    </script>
+    
+</body>
+</html>
